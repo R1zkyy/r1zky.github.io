@@ -244,7 +244,7 @@ export default function App() {
         {/* Right: identity + profile cards */}
         <div className="hp-content">
           <div className="hp-identity">
-            <p className="hero-tag">Mechatronics · PENS · Semester 6</p>
+            <p className="hero-tag">Mechatronics · PENS · 6th Semester</p>
             <h1 className="hero-name">
               M. Rizky<br /><em>Pratama</em>
             </h1>
@@ -518,7 +518,7 @@ export default function App() {
       <div className="footer-bar">
         <div className="footer-brand">R1ZKY · DAT</div>
         <div className="footer-sys">
-          <div>PENS MECHATRONICS — SEMESTER 6</div>
+          <div>PENS MECHATRONICS — 6TH SEMESTER</div>
           <div>EOF · 2026</div>
         </div>
       </div>
