@@ -302,9 +302,30 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── NETWORK ── */}
+      <section className="section" id="network">
+        <div className="section-number">02 // NETWORK</div>
+        <h2 className="section-title">Organizations &<br /><em>Affiliations</em></h2>
+        <div className="org-grid">
+          {ORGS.map((o, i) => {
+            const Inner = (
+              <>
+                <div className="org-period">{o.period}</div>
+                <div className="org-name">{o.name}</div>
+                <div className="org-role">{o.role}</div>
+                {o.href && <span className="org-link-label">Visit ↗</span>}
+              </>
+            );
+            return o.href
+              ? <a key={i} href={o.href} target="_blank" rel="noopener noreferrer" className="org-card org-card-link">{Inner}</a>
+              : <div key={i} className="org-card">{Inner}</div>;
+          })}
+        </div>
+      </section>
+
       {/* ── EXPERIENCE ── */}
       <section className="section" id="experience">
-        <div className="section-number">02 // EXPERIENCE</div>
+        <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
           {DIVISIONS.filter(div => div.tag !== '09').map((div, di) => (
@@ -348,7 +369,7 @@ export default function App() {
 
       {/* ── PROJECTS ── */}
       <section className="section" id="projects">
-        <div className="section-number">03 // PROJECTS</div>
+        <div className="section-number">04 // PROJECTS</div>
         <h2 className="section-title">Work &<br /><em>Projects</em></h2>
         <div className="project-row">
           {PROJECTS.map((p, i) => (
@@ -379,7 +400,7 @@ export default function App() {
 
       {/* ── DESIGN ── */}
       <section className="section" id="design">
-        <div className="section-number">04 // DESIGN</div>
+        <div className="section-number">05 // DESIGN</div>
         <h2 className="section-title">Creative<br /><em>Design</em></h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
           {DIVISIONS.find(d => d.tag === '09')?.events?.map((cat, i) => (
@@ -411,7 +432,7 @@ export default function App() {
 
       {/* ── ACHIEVEMENTS ── */}
       <section className="section" id="achievements">
-        <div className="section-number">05 // ACHIEVEMENTS</div>
+        <div className="section-number">06 // ACHIEVEMENTS</div>
         <h2 className="section-title">Awards &<br /><em>Recognition</em></h2>
         <div className="ach-grid">
           {ACHIEVEMENTS.map((a, i) => {
@@ -429,27 +450,6 @@ export default function App() {
             return a.href
               ? <a key={i} href={a.href} target="_blank" rel="noopener noreferrer" className={`ach-card ach-card-link${a.accent ? ' accent' : ''}`}>{Inner}</a>
               : <div key={i} className={`ach-card${a.accent ? ' accent' : ''}`}>{Inner}</div>;
-          })}
-        </div>
-      </section>
-
-      {/* ── NETWORK ── */}
-      <section className="section" id="network">
-        <div className="section-number">06 // NETWORK</div>
-        <h2 className="section-title">Organizations &<br /><em>Affiliations</em></h2>
-        <div className="org-grid">
-          {ORGS.map((o, i) => {
-            const Inner = (
-              <>
-                <div className="org-period">{o.period}</div>
-                <div className="org-name">{o.name}</div>
-                <div className="org-role">{o.role}</div>
-                {o.href && <span className="org-link-label">Visit ↗</span>}
-              </>
-            );
-            return o.href
-              ? <a key={i} href={o.href} target="_blank" rel="noopener noreferrer" className="org-card org-card-link">{Inner}</a>
-              : <div key={i} className="org-card">{Inner}</div>;
           })}
         </div>
       </section>
