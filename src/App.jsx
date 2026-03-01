@@ -35,12 +35,12 @@ const DIVISIONS = [
   {
     tag: '02', name: 'Master of Ceremony',
     events: [
-      { role: 'MC', title: 'FPWP Mekatronika 2024', date: 'Oct 4, 2024', details: ['Hosted FPWP (Ekspresi Kreasi Teknik Mekatronika) event'], img: imgMcFpwp, imgOptions: { hoverPop: true } },
-      { role: 'MC', title: 'Serah Terima Jabatan Mekatronika 2024/2025', date: 'Sep 19, 2024', details: ['Hosted the official handover ceremony for Mekatronika student leadership 2024/2025'], img: '/certs/mc_sertijab.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
-      { role: 'MC', title: 'Final Project Competition 2025', date: 'Jul 1–3, 2025', details: ['Hosted the main stage for final project presentations', 'Guided audience through 3-day competition'], img: imgMcFpc, imgOptions: { hoverPop: true } },
       { role: 'MC', title: 'PKKMB × TECHNOGEAR 2024', date: 'Aug 12–17, 2024', details: ['Facilitated official student orientation event'], img: '/certs/mc_pkkmb.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
+      { role: 'MC', title: 'Serah Terima Jabatan Mekatronika 2024/2025', date: 'Sep 19, 2024', details: ['Hosted the official handover ceremony for Mekatronika student leadership 2024/2025'], img: '/certs/mc_sertijab.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
+      { role: 'MC', title: 'FPWP Mekatronika 2024', date: 'Oct 4, 2024', details: ['Hosted FPWP (Ekspresi Kreasi Teknik Mekatronika) event'], img: imgMcFpwp, imgOptions: { hoverPop: true } },
       { role: 'MC', title: 'LKMM TD PENS 2025', date: 'May 15–17, 2025', details: ['Hosted official student leadership training', 'Maintained participant engagement'], img: imgLkmmTd, imgOptions: { hoverPop: true } },
-      { role: 'MC', title: 'Navigasi Karir', date: 'Jun 14, 2025', details: ['Facilitated a career navigation event & audience interaction'], img: imgMcKarir, imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
+      { role: 'MC', title: 'Navigasi Karir', date: 'Jun 14, 2025', details: ['Facilitated a career navigation event & audience interaction'], img: imgMcKarir, imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
+      { role: 'MC', title: 'Final Project Competition 2025', date: 'Jul 1–3, 2025', details: ['Hosted the main stage for final project presentations', 'Guided audience through 3-day competition'], img: imgMcFpc, imgOptions: { hoverPop: true } }
     ]
   },
   {
@@ -125,9 +125,9 @@ const DIVISIONS = [
 ];
 
 const PROJECTS = [
+  { title: 'CNC-Based Project', date: 'Feb–May 2024', desc: 'Precision component design using CNC technology with WinMax & CAD/CAM.', tech: 'Winmax, CNC Haas Mill VF3', color: 'c-steel', icon: '⚙️', img: '/certs/cnc_based.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
   { title: 'Scoring Board', date: 'Aug–Dec 2024', desc: 'Electronic scoring board with dual 7-segment displays and potentiometer-based score control, housed in a transparent acrylic enclosure. Designed for real-time score tracking in competition events.', tech: 'Electronics, PCB Design, Acrylic Fabrication', color: 'c-steel', icon: '🎯', img: '/certs/scoring_board.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
   { title: 'Workshop 3D: Making Urban Toys', date: 'Sept–Oct 2024', desc: '3D design & printing workshop focused on crafting urban-themed toys.', tech: 'Blender', color: 'c-lime', icon: '🎮', img: '/certs/workshop_3d.png', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
-  { title: 'CNC-Based Project', date: 'Feb–May 2024', desc: 'Precision component design using CNC technology with WinMax & CAD/CAM.', tech: 'Winmax, CNC Haas Mill VF3', color: 'c-steel', icon: '⚙️', img: '/certs/cnc_based.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
   { title: 'CNC Machine Control System', date: 'Dec 2024', desc: 'Innovative CNC machine control system integrated with Autodesk Inventor.', tech: 'Autodesk Inventor', color: 'c-dark', icon: '💻', img: '/certs/cnc_machine.png', imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center', background: '#e8f0fb' } } },
   { title: 'RTSS — Robot Tangan Satu Sendi', date: 'Feb–May 2025', desc: 'Single-joint robotic arm system simulated and designed for mechanical analysis and control.', tech: 'Proteus, Inventor', color: 'c-steel', icon: '🤖', img: '/certs/final_upload3.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
   { title: 'PID Analog', date: 'May–Jun 2025', desc: 'Analog PID-based DC motor speed control system. Maintains motor speed at setpoint by adjusting input voltage using Proportional-Integral-Derivative control.', tech: 'Proteus, Inventor', color: 'c-lime', icon: '🔧', img: '/certs/pid_analog.png', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
