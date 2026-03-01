@@ -226,7 +226,7 @@ export default function App() {
           R1ZKY
         </div>
         <nav className="header-nav">
-          {[['Profile', '#profile'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Network', '#network'], ['Internship', '#internship']].map(([l, h]) => (
+          {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
             <a key={l} href={h} className="header-nav-link">{l}</a>
           ))}
         </nav>
