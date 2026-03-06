@@ -29,6 +29,14 @@ const DIVISIONS = [
         details: ['Person-in-Charge of the career roadmap event', 'Organized speakers, rundown, and event flow'],
         img: '/certs/career_roadmap.jpg',
         imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
+      },
+      {
+        role: 'PIC',
+        title: 'Data Science 101: Taking Your First Steps in the World of Data',
+        date: 'Mar 6, 2026',
+        details: [],
+        img: '/certs/data_science.jpg',
+        imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
       }
     ]
   },
@@ -105,20 +113,14 @@ const DIVISIONS = [
     tag: '09', name: 'Design',
     events: [
       {
-        role: 'Design', title: 'Digital Design', date: '', details: [], img: null,
-        links: [
-          { label: 'View Process 1 ↗', url: 'https://www.instagram.com/p/COF5M3AJ-VX/embed/' },
-          { label: 'View Process 2 ↗', url: 'https://www.instagram.com/p/CT0526CJDXN/embed/' },
-          { label: 'View Process 3 ↗', url: 'https://www.instagram.com/p/DVI6WuPE5iF/embed/' }
-        ]
+        role: 'Design', title: 'Digital Design', date: '', details: [], img: '/certs/digital_design.png',
+        imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center' } },
+        links: []
       },
       {
-        role: 'Design', title: 'Product Design', date: '', details: [], img: null,
-        links: [
-          { label: 'View Details 1 ↗', url: 'https://www.instagram.com/p/DRUOkcSE0Ut/embed/' },
-          { label: 'View Details 2 ↗', url: 'https://www.instagram.com/p/DVN3pEsk3K-/embed/' },
-          { label: 'View Details 3 ↗', url: 'https://www.instagram.com/p/DVSnrYwE7EY/embed/' }
-        ]
+        role: 'Design', title: 'Product Design', date: '', details: [], img: '/certs/product_design.png',
+        imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center' } },
+        links: []
       }
     ]
   }
