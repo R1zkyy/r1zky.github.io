@@ -412,20 +412,31 @@ export default function App() {
                 <span className="div-name">{cat.title}</span>
               </div>
               <div className="event-cards-row">
-                {cat.links?.map((linkObj, j) => (
-                  <div key={j} className="event-card" style={{ padding: 0 }}>
-                    <iframe
-                      src={linkObj.url}
-                      width="100%"
-                      height="480"
-                      title={`Instagram Embed ${j}`}
-                      frameBorder="0"
-                      scrolling="no"
-                      allowTransparency="true"
-                      style={{ border: 'none', overflow: 'hidden', background: '#fff' }}
+                {cat.img ? (
+                  <div className="event-card" style={{ padding: '16px' }}>
+                    <PhotoSlot
+                      src={cat.img}
+                      alt={cat.title}
+                      className=""
+                      imgOptions={cat.imgOptions}
                     />
                   </div>
-                ))}
+                ) : (
+                  cat.links?.map((linkObj, j) => (
+                    <div key={j} className="event-card" style={{ padding: 0 }}>
+                      <iframe
+                        src={linkObj.url}
+                        width="100%"
+                        height="480"
+                        title={`Instagram Embed ${j}`}
+                        frameBorder="0"
+                        scrolling="no"
+                        allowTransparency="true"
+                        style={{ border: 'none', overflow: 'hidden', background: '#fff' }}
+                      />
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           ))}
