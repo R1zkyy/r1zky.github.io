@@ -113,14 +113,20 @@ const DIVISIONS = [
     tag: '09', name: 'Design',
     events: [
       {
-        role: 'Design', title: 'Digital Design', date: '', details: [], img: '/certs/digital_design.png',
-        imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center' } },
-        links: []
+        role: 'Design', title: 'Digital Design', date: '', details: [], img: null,
+        links: [
+          { label: 'View Process 1 ↗', url: 'https://www.instagram.com/p/COF5M3AJ-VX/embed/' },
+          { label: 'View Process 2 ↗', url: 'https://www.instagram.com/p/CT0526CJDXN/embed/' },
+          { label: 'View Process 3 ↗', url: 'https://www.instagram.com/p/DVI6WuPE5iF/embed/' }
+        ]
       },
       {
-        role: 'Design', title: 'Product Design', date: '', details: [], img: '/certs/product_design.png',
-        imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center' } },
-        links: []
+        role: 'Design', title: 'Product Design', date: '', details: [], img: null,
+        links: [
+          { label: 'View Details 1 ↗', url: 'https://www.instagram.com/p/DRUOkcSE0Ut/embed/' },
+          { label: 'View Details 2 ↗', url: 'https://www.instagram.com/p/DVN3pEsk3K-/embed/' },
+          { label: 'View Details 3 ↗', url: 'https://www.instagram.com/p/DVSnrYwE7EY/embed/' }
+        ]
       }
     ]
   }
@@ -412,31 +418,20 @@ export default function App() {
                 <span className="div-name">{cat.title}</span>
               </div>
               <div className="event-cards-row">
-                {cat.img ? (
-                  <div className="event-card" style={{ padding: '16px' }}>
-                    <PhotoSlot
-                      src={cat.img}
-                      alt={cat.title}
-                      className=""
-                      imgOptions={cat.imgOptions}
+                {cat.links?.map((linkObj, j) => (
+                  <div key={j} className="event-card" style={{ padding: 0 }}>
+                    <iframe
+                      src={linkObj.url}
+                      width="100%"
+                      height="480"
+                      title={`Instagram Embed ${j}`}
+                      frameBorder="0"
+                      scrolling="no"
+                      allowTransparency="true"
+                      style={{ border: 'none', overflow: 'hidden', background: '#fff' }}
                     />
                   </div>
-                ) : (
-                  cat.links?.map((linkObj, j) => (
-                    <div key={j} className="event-card" style={{ padding: 0 }}>
-                      <iframe
-                        src={linkObj.url}
-                        width="100%"
-                        height="480"
-                        title={`Instagram Embed ${j}`}
-                        frameBorder="0"
-                        scrolling="no"
-                        allowTransparency="true"
-                        style={{ border: 'none', overflow: 'hidden', background: '#fff' }}
-                      />
-                    </div>
-                  ))
-                )}
+                ))}
               </div>
             </div>
           ))}
