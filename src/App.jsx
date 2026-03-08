@@ -223,8 +223,21 @@ function PhotoSlot({ src, alt = '', className = '', imgOptions }) {
 // ─── APP ─────────────────────────────────────────────────────────────────────
 
 export default function App() {
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      document.documentElement.style.setProperty('--mouse-x', x);
+      document.documentElement.style.setProperty('--mouse-y', y);
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <>
+      <div className="ambient-glow glow-1" aria-hidden="true" />
+      <div className="ambient-glow glow-2" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
 
       {/* ── HEADER ── */}

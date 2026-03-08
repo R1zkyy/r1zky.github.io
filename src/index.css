@@ -34,7 +34,47 @@ body {
   color: var(--chalk);
   font-family: var(--font-b);
   overflow-x: hidden;
-  cursor: default;
+  cursor: crosshair !important;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  cursor: crosshair !important;
+}
+
+/* ─── AMBIENT GLOW (Parallax 3D Depth) ─── */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  transition: transform 0.1s ease-out;
+}
+
+.glow-1 {
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--lime) 0%, transparent 60%);
+  top: -10vw;
+  left: -10vw;
+  /* Moves slightly opposite to mouse */
+  transform: translate(calc(var(--mouse-x, 0.5) * -4vw), calc(var(--mouse-y, 0.5) * -4vw));
+}
+
+.glow-2 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #00d2ff 0%, transparent 60%);
+  bottom: -10vw;
+  right: -10vw;
+  /* Moves parallel to mouse but slower */
+  transform: translate(calc(var(--mouse-x, 0.5) * 3vw), calc(var(--mouse-y, 0.5) * 3vw));
 }
 
 /* ─── FILM GRAIN (Graphic Realism core element) ─── */
@@ -133,13 +173,15 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--lime);
-  transition: width 0.25s var(--ease);
+  box-shadow: 0 0 8px var(--lime);
+  transition: width 0.15s ease-out;
 }
 
 .header-nav-link:hover {
   color: var(--chalk);
+  letter-spacing: 3px;
 }
 
 .header-nav-link:hover::after {
@@ -162,6 +204,9 @@ a {
 
 .header-cta:hover {
   background: var(--chalk);
+  letter-spacing: 4.5px;
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
 }
 
 /* ─── HERO + PROFILE MERGED SECTION ─── */
@@ -177,6 +222,41 @@ a {
 .hp-photo-col {
   position: relative;
   overflow: hidden;
+}
+
+.hp-photo-col::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background-image: repeating-linear-gradient(transparent, transparent 2px, rgba(0, 0, 0, 0.3) 2px, rgba(0, 0, 0, 0.3) 4px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.hp-photo-col:hover::after {
+  opacity: 1;
+  animation: scanline-shift 0.15s steps(2) infinite;
+}
+
+.hp-photo-col:hover .hp-photo {
+  filter: brightness(0.9) contrast(1.4) saturate(0.5) hue-rotate(90deg);
+  transition: filter 0.1s;
+}
+
+@keyframes scanline-shift {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .hp-photo {
@@ -294,6 +374,8 @@ a {
   display: flex;
   flex-direction: column;
   height: auto;
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -1313,7 +1395,10 @@ a {
 }
 
 .contact-btn:hover {
-  background: #111;
+  background: var(--chalk);
+  letter-spacing: 4.5px;
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
 }
 
 .contact-right {
@@ -1361,6 +1446,55 @@ a {
 
 .contact-item-value.link:hover {
   color: var(--lime);
+  text-shadow: 0 0 5px var(--lime);
+}
+
+/* ─── CYBERNETIC DECORATIONS (Hazard Stripes) ─── */
+.hp-card::after,
+.card::after,
+.event-card::after,
+.ach-card::after,
+.org-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 8px;
+  background-image: repeating-linear-gradient(-45deg, var(--lime), var(--lime) 4px, var(--ink) 4px, var(--ink) 8px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Animated Underline for Text Links */
+.ach-link-label::after,
+.org-link-label::after,
+.event-card-link-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--lime);
+  box-shadow: 0 0 5px var(--lime);
+  transition: width 0.15s ease-out;
+}
+
+.ach-card-link:hover .ach-link-label::after,
+.org-card-link:hover .org-link-label::after,
+.event-card-link-btn:hover::after {
+  width: 100%;
+}
+
+.ach-card-link:hover .ach-link-label,
+.org-card-link:hover .org-link-label,
+.event-card-link-btn:hover {
+  letter-spacing: 3px;
+  color: var(--chalk);
+  text-shadow: 0 0 5px var(--lime);
+  transition: all 0.15s;
 }
 
 .footer-bar {
