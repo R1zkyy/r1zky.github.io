@@ -34,7 +34,7 @@ const DIVISIONS = [
         role: 'PIC',
         title: 'Data Science 101: Taking Your First Steps in the World of Data',
         date: 'Mar 6, 2026',
-        details: [],
+        details: ['Person-in-Charge of the data science 101 event', 'Organized speakers, rundown, and event flow'],
         img: '/certs/data_science.jpg',
         imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
       }
