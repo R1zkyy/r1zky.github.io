@@ -244,11 +244,14 @@ export default function App() {
       {/* ── HUD DECALS ── */}
       <div className="hud-container" aria-hidden="true">
         <div className="hud-decal tl">
-          <span>GRID :: X42 DELTA</span>
-          <span>TRACEPOINT: TAU CETI IV</span>
-          <br />
-          <span>SYS.PULSE: ACTIVE</span>
-          <span>N4-V03 9B-XD</span>
+          <div className="hud-group">
+            <span>GRID :: X42 DELTA</span>
+            <span>TRACEPOINT: TAU CETI IV</span>
+          </div>
+          <div className="hud-group">
+            <span>SYS.PULSE: ACTIVE</span>
+            <span>N4-V03 9B-XD</span>
+          </div>
         </div>
         <div className="hud-decal bl">
           <span>E-CORE DENSITY: LOW</span>

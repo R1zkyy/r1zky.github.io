@@ -31,30 +31,33 @@ html {
 
 body {
   background-color: var(--ink);
-  /* The "Plus" (+) Grid Background */
-  background-image:
-    linear-gradient(90deg, transparent 96%, rgba(200, 255, 0, 0.05) 96%),
-    linear-gradient(0deg, transparent 96%, rgba(200, 255, 0, 0.05) 96%);
-  background-size: 40px 40px;
-  background-position: center;
   color: var(--chalk);
   font-family: var(--font-b);
   overflow-x: hidden;
   cursor: crosshair !important;
 }
 
-/* Base styling to make the grid look like detached "+" symbols rather than full lines */
+/* Base styling to make the grid look like detached "+" symbols */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-color: var(--ink);
+  background-size: 30px 30px;
   background-image:
-    linear-gradient(90deg, transparent 38px, var(--ink) 38px),
-    linear-gradient(0deg, transparent 38px, var(--ink) 38px);
-  background-size: 40px 40px;
-  opacity: 0.95;
+    linear-gradient(to right, rgba(200, 255, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(200, 255, 0, 0.15) 1px, transparent 1px);
+  mask-image:
+    linear-gradient(to right, black 4px, transparent 4px),
+    linear-gradient(to bottom, black 4px, transparent 4px);
+  mask-size: 30px 30px;
+  mask-position: -2px -2px;
+  /* Center the cross intersection */
+  -webkit-mask-image:
+    linear-gradient(to right, black 4px, transparent 4px),
+    linear-gradient(to bottom, black 4px, transparent 4px);
+  -webkit-mask-size: 30px 30px;
+  -webkit-mask-position: -1px -1px;
   z-index: -1;
 }
 
@@ -221,17 +224,19 @@ a {
 .hud-decal {
   position: absolute;
   font-family: var(--font-m);
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   color: var(--lime);
   text-transform: uppercase;
   letter-spacing: 2px;
-  opacity: 0.4;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .hud-decal.tl {
   top: 80px;
-  left: 20px;
+  left: 32px;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
 }
 
 .hud-decal.bl {
@@ -254,6 +259,26 @@ a {
 .hud-decal span:first-child {
   opacity: 0.8;
   font-weight: bold;
+}
+
+.hud-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.hud-group:first-child {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(200, 255, 0, 0.15);
+}
+
+.hud-group span {
+  display: block;
+}
+
+.hud-group span:first-child {
+  font-weight: 700;
+  color: #d8ff40;
 }
 
 .header-cta {
