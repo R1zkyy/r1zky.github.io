@@ -30,34 +30,25 @@ html {
 }
 
 body {
-  background-color: var(--ink);
+  background-color: #1a1a1a;
+  /* Solid dark gray */
   color: var(--chalk);
   font-family: var(--font-b);
   overflow-x: hidden;
   cursor: crosshair !important;
 }
 
-/* Base styling to make the grid look like detached "+" symbols */
+/* Base styling to make the grid look like a dot matrix */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-size: 30px 30px;
-  background-image:
-    linear-gradient(to right, rgba(200, 255, 0, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(200, 255, 0, 0.15) 1px, transparent 1px);
-  mask-image:
-    linear-gradient(to right, black 4px, transparent 4px),
-    linear-gradient(to bottom, black 4px, transparent 4px);
-  mask-size: 30px 30px;
-  mask-position: -2px -2px;
-  /* Center the cross intersection */
-  -webkit-mask-image:
-    linear-gradient(to right, black 4px, transparent 4px),
-    linear-gradient(to bottom, black 4px, transparent 4px);
-  -webkit-mask-size: 30px 30px;
-  -webkit-mask-position: -1px -1px;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 32px 32px;
+  /* Spacing between dots */
+  opacity: 0.15;
+  /* Transparency of the white dots */
   z-index: -1;
 }
 
