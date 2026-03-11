@@ -1,0 +1,59 @@
+AFFANDY FAHRIZAIN
++628975504812 | affahrizain@gmail.com | https://www.linkedin.com/in/fahrizainn/ | https://fhrzn.github.io/
+With 3 years hands- on experience in AI engineering, I’ve built solutions across various use cases, including FAQ automation, product recommendations, image-to-image search, and voice agents. I’m also experienced in developing data transformation pipelines to support analytics and improve decision-making.
+
+Education Level
+Universitas Airlangga - Surabaya, Indonesia	Sep 2016 - Sep 2020
+Bachelor of Information System, 3.59/4.00
+ Appointed the lead of Google Developer Student Club, delivering bootcamp attended by 20+ local students.  Appointed as head of Research and Technology student assoc., conducted monthly workshops for students.
+ITMO University - Saint Petersburg, Russia	Sep 2021 - Sep 2023
+Masters Big Data and Machine Learning (English-based), 3.96/4.00
+
+Tokyo Metropolitan University - Tokyo, Japan	Oct 2025 - Sep 2028 (Expected)
+Ph.D. in Computer Science
+
+Work Experiences
+Kata.ai - Jakarta (Remote), Indonesia	Feb 2023 - Jan 2026
+AI/Data Engineer
+An Indonesian conversational artificial intelligence company focused on understanding human conversation.  Built an LLM RAG-based Chatbot engine that increased the team's chatbot project management by 80%  Migrated from on-premise data stack to Google BigQuery
+ Built multiple datamart layers using BigQuery to provide quick and lightweight query reports for clients and the analytics team
+ Conduct research on the latest LLM technology for chatbot engine enhancement
+We Are Social (SG) - Singapore (Remote)	Oct 2024 - May 2025
+AI Developer
+A global creative agency that focuses on social media and helps clients reach the right people.
+ Develop a comprehensive voice interaction system that facilitates intuitive user engagement through NLP.
+ Develop RAG to enhance product retrieval capabilities, allowing the agent to pull in relevant and deliver accurate product recommendations based on a captured user image or specific queries.
+ Develop and maintain backend APIs for agent management and developer settings, to enable seamless configuration updates.  Collaborate closely with backend, frontend, and UX teams to ensure the voice agent meets user needs and expectations.
+Qarir Generator - Jakarta (Remote), Indonesia	Dec 2023 - Apr 2024
+AI Engineering Mentor (Part-Time)
+An EdTech platform providing digital courses
+ Built up beginner to medium friendly AI Engineering curriculum
+ Develop systematic materials on basic programming and data preprocessing
+ Conduct online classes with 20-25 students twice a week with 80% positive feedback for each meetup
+ITMO University - St. Petersburg, Russia	Jan 2023 - Aug 2023
+Research Engineer (NLP)
+One of Russia's leading higher education and research institutions, specializing in IT, Optical Design, and Engineering.  Developed weakly supervised and unsupervised methods for text detoxification
+ Contributed to AutoTM project for automatic topic modeling
+Jakarta AI Research - Jakarta (Remote), Indonesia	Oct 2021 - Dec 2023
+Data Science Fellow
+A research community that focuses on artificial intelligence for social good.
+ Conducted research on Indonesian Question Answering (IndoQA) dataset generation  Crawled and preprocessed Indonesian Wikipedia data for IndoQA
+ Research the Indonesian Review Generation using a large pre-trained model
+Mitra Informatika - Surabaya, Indonesia	Dec 2020 - Jun 2021
+Data Engineer
+Multi-Vendor & Technologies Solution.
+
+ Maintain data pipeline which is used to ingest GigaBytes data every day
+ Maintain communication with business partners and give regular project updates  Collaborate with business partners' vendors to deliver good data platform solution
+Organisational Experience
+Data Science Indonesia - Jakarta (Remote), Indonesia	Mar 2021 - Mar 2022
+Curriculum Researcher
+An Indonesian data science community focusing on social impact
+ Contributed to Indonesian python for data science curriculum with 400-1000 views and positive feedback.
+
+Skills, Online Courses & Other Experience
+ Achievements (2018): 1st place Qur'an Design Application - MTQ UNAIR
+ Achievements (2019): Silver Medalist - International Malaysia-Indonesia-Thailand Symposium (iMIT SIC)
+ Achievements (2019): Gold Medalist - International Exhibition of Research (ie-Riich)
+ Achievements (2019): Best Project on ie-Riich 2019 - IEEE Systems, Man & Cybernetics Malaysia chapter
+ Achievements (2020): Finalist Mobile Developer challenge - ALE Battle Geek by Alcatel Lucent Enterprise
