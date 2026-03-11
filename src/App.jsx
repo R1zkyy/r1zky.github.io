@@ -256,10 +256,30 @@ export default function App() {
 
       {/* ── HERO + PROFILE ── */}
       <section className="hero-profile" id="profile">
-        {/* Left: full-height photo — object-position top so face is always visible */}
         <div className="hp-photo-col">
           <img className="hp-photo" src="/rizky.jpg" alt="M. Rizky Pratama" />
           <div className="hp-photo-overlay" />
+
+          {/* Marathon-style Infographic HUD */}
+          <div className="hp-hud-infographic">
+            <div className="hud-line">
+              <span className="hud-label">GRID ::</span>
+              <span className="hud-value">X42 DELTA</span>
+            </div>
+            <div className="hud-line">
+              <span className="hud-label">TRACEPOINT:</span>
+              <span className="hud-value">TAU CETI IV</span>
+            </div>
+            <div className="hud-divider"></div>
+            <div className="hud-line">
+              <span className="hud-label">SYS.PULSE:</span>
+              <span className="hud-value">ACTIVE</span>
+            </div>
+            <div className="hud-line">
+              <span className="hud-label">N4-V03</span>
+              <span className="hud-value">9B-XD</span>
+            </div>
+          </div>
         </div>
 
         {/* Right: identity + profile cards */}
