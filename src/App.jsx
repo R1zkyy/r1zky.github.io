@@ -244,7 +244,7 @@ export default function App() {
       <header className="header">
         <div className="header-brand">
           <span className="header-brand-dot" />
-          M. RIZKY PRATAMA
+          R1ZKY
         </div>
         <nav className="header-nav">
           {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
@@ -537,10 +537,10 @@ export default function App() {
       </section>
 
       <div className="footer-bar">
-        <div className="footer-brand">M. RIZKY PRATAMA</div>
+        <div className="footer-brand">R1ZKY · DAT</div>
         <div className="footer-sys">
-          <div>MECHATRONICS ENGINEERING — PENS</div>
-          <div>SIDOARJO, INDONESIA · 2026</div>
+          <div>PENS MECHATRONICS — 6TH SEMESTER</div>
+          <div>EOF · 2026</div>
         </div>
       </div>
     </>
