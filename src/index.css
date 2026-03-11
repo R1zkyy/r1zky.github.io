@@ -61,37 +61,6 @@ textarea {
   cursor: crosshair !important;
 }
 
-/* ─── AMBIENT GLOW (Parallax 3D Depth) ─── */
-.ambient-glow {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.15;
-  transition: transform 0.1s ease-out;
-}
-
-.glow-1 {
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, var(--lime) 0%, transparent 60%);
-  top: -10vw;
-  left: -10vw;
-  /* Moves slightly opposite to mouse */
-  transform: translate(calc(var(--mouse-x, 0.5) * -4vw), calc(var(--mouse-y, 0.5) * -4vw));
-}
-
-.glow-2 {
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, #00d2ff 0%, transparent 60%);
-  bottom: -10vw;
-  right: -10vw;
-  /* Moves parallel to mouse but slower */
-  transform: translate(calc(var(--mouse-x, 0.5) * 3vw), calc(var(--mouse-y, 0.5) * 3vw));
-}
-
 /* ─── FILM GRAIN (Graphic Realism core element) ─── */
 .grain {
   position: fixed;
