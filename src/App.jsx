@@ -240,16 +240,23 @@ export default function App() {
 
       {/* ── HEADER ── */}
       <header className="header">
-        <div className="header-brand">
-          <span className="header-brand-dot" />
-          R1ZKY
+        <div className="header-cluster">
+          <div className="hc-pill hc-lime">
+            <span className="hc-icon">⚡</span> R1ZKY
+          </div>
+          <div className="hc-pill hc-dark">
+            <span className="hc-dot"></span> I
+          </div>
+          <div className="hc-pill hc-gray">
+            <span>▣ SEM.06</span> <span>◎ ONLINE</span>
+          </div>
         </div>
-        <nav className="header-nav">
-          {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
-            <a key={l} href={h} className="header-nav-link">{l}</a>
+        <nav className="header-nav-marathon">
+          {[['Profile', '#profile'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
+            <a key={l} href={h} className="h-nav-btn">{l}</a>
           ))}
+          <a href="#contact" className="h-nav-btn h-nav-lime">CONTACT ↗</a>
         </nav>
-        <a href="#contact" className="header-cta">Contact</a>
       </header>
 
       {/* ── HERO + PROFILE ── */}
