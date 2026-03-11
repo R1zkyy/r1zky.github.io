@@ -106,7 +106,8 @@ const DIVISIONS = [
       { role: 'Event Staff', title: 'Final Project Competition 2025', date: 'Jul 1–3, 2025', details: [], img: '/certs/fpc_2025.png', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
       { role: 'Project Leader (Ketua Pelaksana)', title: 'International Webinar IEEE', date: 'Oct 18, 2025', details: [], img: '/certs/ieee_webinar.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
       { role: 'Safety Division Member', title: 'Chibicon 9', date: 'Dec 27–28, 2025', details: [], img: '/certs/chibicon_9.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
-      { role: 'Sound Director', title: 'SSHMRun 2025', date: 'Aug 1–3, 2025', details: [], img: '/certs/sshm_run.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
+      { role: 'Sound Director', title: 'SSHMRun 2025', date: 'Aug 1–3, 2025', details: [], img: '/certs/sshm_run.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
+      { role: 'Volunteer', title: 'Flutter Fusion Conference', date: 'Feb 21, 2026', details: [], img: '/certs/flutter_fusion_cert.png', imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center', backgroundColor: '#e8f0fb' } } }
     ]
   },
   {
