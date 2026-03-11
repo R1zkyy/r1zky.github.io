@@ -8,7 +8,6 @@
   --chalk: #f5f5f0;
   --mid: #666666;
   --lime: #c8ff00;
-  --cyan: #00e5ff;
   --rust: #d44a1a;
   --border: rgba(245, 245, 240, 0.1);
   --border2: rgba(245, 245, 240, 0.2);
@@ -99,132 +98,78 @@ a {
 }
 
 /* ─── HEADER ─── */
-/* ─── MARATHON HEADER ─── */
 .header {
   position: fixed;
-  top: 16px;
-  left: 24px;
-  right: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 500;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 44px;
-  background: transparent;
-  pointer-events: none;
-}
-
-.header-cluster {
-  display: flex;
-  height: 100%;
-  border-radius: 22px;
+  padding: 0 40px;
+  height: 56px;
   background: var(--ink);
-  pointer-events: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* Solid black */
+  border-bottom: 1px solid var(--border);
 }
 
-.hc-pill {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
+.header-brand {
   font-family: var(--font-h);
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  height: 100%;
-  border-right: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.hc-pill:last-child {
-  border-right: none;
-}
-
-.hc-lime {
-  background: var(--lime);
-  color: var(--ink);
-  border-top-left-radius: 21px;
-  border-bottom-left-radius: 21px;
-  gap: 8px;
-  padding-left: 20px;
-}
-
-.hc-icon {
-  font-size: 0.9rem;
-  margin-top: -2px;
-}
-
-.hc-dark {
-  background: #2a2a30;
+  font-size: 1.8rem;
+  letter-spacing: 4px;
   color: var(--chalk);
-  gap: 10px;
-  font-family: var(--font-m);
-  font-size: 0.75rem;
-}
-
-.hc-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid var(--mid);
-}
-
-.hc-gray {
-  background: #a9a9b3;
-  color: var(--ink);
-  border-top-right-radius: 21px;
-  border-bottom-right-radius: 21px;
-  padding-right: 20px;
-  gap: 16px;
-  font-family: var(--font-m);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.header-nav-marathon {
-  display: flex;
-  gap: 8px;
-  pointer-events: auto;
-}
-
-.h-nav-btn {
-  background: rgba(30, 30, 35, 0.95);
-  color: rgba(245, 245, 240, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  padding: 0 16px;
-  height: 44px;
+  line-height: 1;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.header-brand-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--lime);
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.header-nav-link {
   font-family: var(--font-m);
   font-size: 0.7rem;
-  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.2s;
-  backdrop-filter: blur(4px);
+  letter-spacing: 2px;
+  color: var(--mid);
+  transition: color 0.2s;
+  position: relative;
+  padding: 4px 0;
 }
 
-.h-nav-btn:hover {
-  background: #2a2a30;
-  color: var(--chalk);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.h-nav-lime {
+.header-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: var(--lime);
-  color: var(--ink);
-  border-color: var(--lime);
+  box-shadow: 0 0 8px var(--lime);
+  transition: width 0.15s ease-out;
 }
 
-.h-nav-lime:hover {
-  background: var(--chalk);
-  color: var(--ink);
+.header-nav-link:hover {
+  color: var(--chalk);
+  letter-spacing: 3px;
 }
 
-@media (max-width: 1000px) {
-  .header-nav-marathon {
-    display: none;
-  }
+.header-nav-link:hover::after {
+  width: 100%;
 }
 
 /* ─── HUD DECALS (Cybernetic Text) ─── */
@@ -405,7 +350,7 @@ a {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: var(--cyan);
+  color: var(--lime);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -416,7 +361,7 @@ a {
   content: '';
   width: 28px;
   height: 1px;
-  background: var(--cyan);
+  background: var(--lime);
 }
 
 .hero-name {
@@ -772,7 +717,7 @@ a {
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--cyan);
+  color: var(--lime);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -894,7 +839,7 @@ a {
   font-size: 0.58rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--cyan);
+  color: var(--lime);
 }
 
 .profile-datum-value {
@@ -1563,7 +1508,7 @@ a {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--cyan);
+  color: var(--lime);
   margin-bottom: 36px;
 }
 
