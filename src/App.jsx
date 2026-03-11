@@ -106,8 +106,7 @@ const DIVISIONS = [
       { role: 'Event Staff', title: 'Final Project Competition 2025', date: 'Jul 1–3, 2025', details: [], img: '/certs/fpc_2025.png', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
       { role: 'Project Leader (Ketua Pelaksana)', title: 'International Webinar IEEE', date: 'Oct 18, 2025', details: [], img: '/certs/ieee_webinar.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
       { role: 'Safety Division Member', title: 'Chibicon 9', date: 'Dec 27–28, 2025', details: [], img: '/certs/chibicon_9.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
-      { role: 'Sound Director', title: 'SSHMRun 2025', date: 'Aug 1–3, 2025', details: [], img: '/certs/sshm_run.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
-      { role: 'Volunteer', title: 'Flutter Fusion Conference', date: 'Feb 21, 2026', details: [], img: '/certs/flutter_fusion_cert.png', imgOptions: { hoverPop: true, style: { objectFit: 'contain', objectPosition: 'center', backgroundColor: '#e8f0fb' } } }
+      { role: 'Sound Director', title: 'SSHMRun 2025', date: 'Aug 1–3, 2025', details: [], img: '/certs/sshm_run.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
     ]
   },
   {
@@ -241,33 +240,11 @@ export default function App() {
       <div className="ambient-glow glow-2" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
 
-      {/* ── HUD DECALS ── */}
-      <div className="hud-container" aria-hidden="true">
-        <div className="hud-decal tl">
-          <div className="hud-group">
-            <span>GRID :: X42 DELTA</span>
-            <span>TRACEPOINT: TAU CETI IV</span>
-          </div>
-          <div className="hud-group">
-            <span>SYS.PULSE: ACTIVE</span>
-            <span>N4-V03 9B-XD</span>
-          </div>
-        </div>
-        <div className="hud-decal bl">
-          <span>E-CORE DENSITY: LOW</span>
-          <span>CALIBRATING...</span>
-          <span>RESPONSE: NULL</span>
-        </div>
-        <div className="hud-decal mr">
-          <span>MARATHON // ESCAPE WILL MAKE ME GOD // 2893</span>
-        </div>
-      </div>
-
       {/* ── HEADER ── */}
       <header className="header">
         <div className="header-brand">
           <span className="header-brand-dot" />
-          R1ZKY
+          M. RIZKY PRATAMA
         </div>
         <nav className="header-nav">
           {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
@@ -560,10 +537,10 @@ export default function App() {
       </section>
 
       <div className="footer-bar">
-        <div className="footer-brand">R1ZKY · DAT</div>
+        <div className="footer-brand">M. RIZKY PRATAMA</div>
         <div className="footer-sys">
-          <div>PENS MECHATRONICS — 6TH SEMESTER</div>
-          <div>EOF · 2026</div>
+          <div>MECHATRONICS ENGINEERING — PENS</div>
+          <div>SIDOARJO, INDONESIA · 2026</div>
         </div>
       </div>
     </>
