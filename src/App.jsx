@@ -241,6 +241,25 @@ export default function App() {
       <div className="ambient-glow glow-2" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
 
+      {/* ── HUD DECALS ── */}
+      <div className="hud-container" aria-hidden="true">
+        <div className="hud-decal tl">
+          <span>GRID :: X42 DELTA</span>
+          <span>TRACEPOINT: TAU CETI IV</span>
+          <br />
+          <span>SYS.PULSE: ACTIVE</span>
+          <span>N4-V03 9B-XD</span>
+        </div>
+        <div className="hud-decal bl">
+          <span>E-CORE DENSITY: LOW</span>
+          <span>CALIBRATING...</span>
+          <span>RESPONSE: NULL</span>
+        </div>
+        <div className="hud-decal mr">
+          <span>MARATHON // ESCAPE WILL MAKE ME GOD // 2893</span>
+        </div>
+      </div>
+
       {/* ── HEADER ── */}
       <header className="header">
         <div className="header-brand">

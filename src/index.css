@@ -30,11 +30,32 @@ html {
 }
 
 body {
-  background: var(--ink);
+  background-color: var(--ink);
+  /* The "Plus" (+) Grid Background */
+  background-image:
+    linear-gradient(90deg, transparent 96%, rgba(200, 255, 0, 0.05) 96%),
+    linear-gradient(0deg, transparent 96%, rgba(200, 255, 0, 0.05) 96%);
+  background-size: 40px 40px;
+  background-position: center;
   color: var(--chalk);
   font-family: var(--font-b);
   overflow-x: hidden;
   cursor: crosshair !important;
+}
+
+/* Base styling to make the grid look like detached "+" symbols rather than full lines */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(90deg, transparent 38px, var(--ink) 38px),
+    linear-gradient(0deg, transparent 38px, var(--ink) 38px);
+  background-size: 40px 40px;
+  opacity: 0.95;
+  z-index: -1;
 }
 
 a,
@@ -186,6 +207,53 @@ a {
 
 .header-nav-link:hover::after {
   width: 100%;
+}
+
+/* ─── HUD DECALS (Cybernetic Text) ─── */
+.hud-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.hud-decal {
+  position: absolute;
+  font-family: var(--font-m);
+  font-size: 0.55rem;
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.4;
+  line-height: 1.5;
+}
+
+.hud-decal.tl {
+  top: 80px;
+  left: 20px;
+}
+
+.hud-decal.bl {
+  bottom: 20px;
+  left: 20px;
+}
+
+.hud-decal.mr {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  opacity: 0.2;
+}
+
+.hud-decal span {
+  display: block;
+}
+
+.hud-decal span:first-child {
+  opacity: 0.8;
+  font-weight: bold;
 }
 
 .header-cta {
@@ -409,6 +477,30 @@ a {
   background: var(--ink3);
 }
 
+/* Viewfinder Corners */
+.photo-slot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    linear-gradient(var(--lime), var(--lime)) top left,
+    linear-gradient(var(--lime), var(--lime)) top left,
+    linear-gradient(var(--lime), var(--lime)) top right,
+    linear-gradient(var(--lime), var(--lime)) top right,
+    linear-gradient(var(--lime), var(--lime)) bottom left,
+    linear-gradient(var(--lime), var(--lime)) bottom left,
+    linear-gradient(var(--lime), var(--lime)) bottom right,
+    linear-gradient(var(--lime), var(--lime)) bottom right;
+  background-size:
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px;
+  background-repeat: no-repeat;
+}
+
 .photo-slot-img {
   width: 100%;
   height: 100%;
@@ -559,21 +651,19 @@ a {
 
 .section-number {
   font-family: var(--font-h);
-  font-size: 0.95rem;
-  color: var(--lime);
-  letter-spacing: 3px;
-  display: flex;
+  font-size: 1.1rem;
+  background: var(--lime);
+  color: var(--ink);
+  padding: 6px 16px;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  letter-spacing: 3px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
 }
 
 .section-number::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border2);
-  max-width: 80px;
+  content: none;
 }
 
 .section-title {
@@ -887,10 +977,14 @@ a {
 
 .div-num {
   font-family: var(--font-h);
-  font-size: 1.3rem;
-  color: var(--lime);
-  min-width: 32px;
+  font-size: 1.1rem;
+  background: var(--lime);
+  color: var(--ink);
+  padding: 8px 16px;
+  min-width: 44px;
+  text-align: center;
   line-height: 1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
 }
 
 .div-name {
@@ -1026,13 +1120,29 @@ a {
       rgba(0, 0, 0, 0.1) 8px, rgba(0, 0, 0, 0.1) 16px);
 }
 
-/* Inner border */
+/* Inner Viewfinder Corners */
 .project-visual::after {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  background:
+    linear-gradient(var(--chalk), var(--chalk)) top left,
+    linear-gradient(var(--chalk), var(--chalk)) top left,
+    linear-gradient(var(--chalk), var(--chalk)) top right,
+    linear-gradient(var(--chalk), var(--chalk)) top right,
+    linear-gradient(var(--chalk), var(--chalk)) bottom left,
+    linear-gradient(var(--chalk), var(--chalk)) bottom left,
+    linear-gradient(var(--chalk), var(--chalk)) bottom right,
+    linear-gradient(var(--chalk), var(--chalk)) bottom right;
+  background-size:
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px,
+    16px 2px, 2px 16px;
+  background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 /* Corner cut — same as base .card::before but on different element */
