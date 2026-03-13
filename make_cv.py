@@ -157,7 +157,7 @@ add_entry("Final Project Competition 2024", "Operator", "Jul 9-11, 2024",
           None, ["Operated technical event systems."])
 
 # Support Divisions
-add_entry("Flutter Fusion Conference", "Volunteer", "Feb 21, 2026", 
+add_entry("Flutter Fusion Conference", "Equipment Staff", "Feb 21, 2026", 
           None, ["Managed equipment setup and logistics for the Flutter community conference."])
 add_entry("Chibicon 9", "Safety Division Member", "Dec 27-28, 2025", 
           None, ["Crowd & visitor flow control, maintained event area order."])

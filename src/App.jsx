@@ -37,6 +37,14 @@ const DIVISIONS = [
         details: ['Person-in-Charge of the data science 101 event', 'Organized speakers, rundown, and event flow'],
         img: '/certs/data_science.jpg',
         imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
+      },
+      {
+        role: 'PIC',
+        title: 'GCP Automation: Let the Cloud Do It For You',
+        date: 'Mar 13, 2026',
+        details: ['Person-in-Charge of the GCP Automation event', 'Organized speakers, rundown, and event flow'],
+        img: '/certs/gcp-automation-2.jpg',
+        imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
       }
     ]
   },

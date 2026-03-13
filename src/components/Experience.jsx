@@ -8,6 +8,24 @@ const Experience = () => {
                 event: "International Webinar 'Unlock Global Potential...'",
                 date: "18 Oktober 2025",
                 details: ["Memimpin jalannya acara taraf internasional", "Koordinasi dengan stakeholder dan pembicara global"]
+            },
+            {
+                role: "PIC",
+                event: "Career Roadmap: Navigating the AI Engineering Landscape",
+                date: "27 Februari 2026",
+                details: ["Person-in-Charge of the career roadmap event", "Organized speakers, rundown, and event flow"]
+            },
+            {
+                role: "PIC",
+                event: "Data Science 101: Taking Your First Steps in the World of Data",
+                date: "6 Maret 2026",
+                details: ["Person-in-Charge of the data science 101 event", "Organized speakers, rundown, and event flow"]
+            },
+            {
+                role: "PIC",
+                event: "GCP Automation: Let the Cloud Do It For You",
+                date: "13 Maret 2026",
+                details: ["Person-in-Charge of the GCP Automation event", "Organized speakers, rundown, and event flow"]
             }
         ],
         "MASTER OF CEREMONY (MC)": [
