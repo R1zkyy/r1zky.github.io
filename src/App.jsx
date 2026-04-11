@@ -442,7 +442,7 @@ export default function App() {
               <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={1200} />
             </span>
             <span className="exp-stat-label">Total Events</span>
-            <span className="exp-stat-desc">No role too big, no post too small</span>
+            <span className="exp-stat-desc"><em>No role too big</em>, no post too small.</span>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
