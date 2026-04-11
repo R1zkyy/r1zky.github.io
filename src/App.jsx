@@ -381,18 +381,24 @@ export default function App() {
         <div className="exp-stats-grid">
           <div className="exp-stat-item">
             <span className="exp-stat-num"><CountUp target={4} duration={600} /></span>
-            <span className="exp-stat-label">Organizations</span>
-            <span className="exp-stat-desc">Active memberships joined</span>
+            <div className="exp-stat-text-group">
+              <span className="exp-stat-label">Organizations</span>
+              <span className="exp-stat-desc">Active memberships joined</span>
+            </div>
           </div>
           <div className="exp-stat-item">
             <span className="exp-stat-num"><CountUp target={2025} duration={700} /></span>
-            <span className="exp-stat-label">Active Since</span>
-            <span className="exp-stat-desc">All orgs joined same year</span>
+            <div className="exp-stat-text-group">
+              <span className="exp-stat-label">Active Since</span>
+              <span className="exp-stat-desc">All orgs joined same year</span>
+            </div>
           </div>
           <div className="exp-stat-item">
             <span className="exp-stat-num"><CountUp target={2027} duration={800} /></span>
-            <span className="exp-stat-label">Commit Until</span>
-            <span className="exp-stat-desc">Longest running commitment</span>
+            <div className="exp-stat-text-group">
+              <span className="exp-stat-label">Commit Until</span>
+              <span className="exp-stat-desc">Longest running commitment</span>
+            </div>
           </div>
         </div>
         <div className="org-grid">
