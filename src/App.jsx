@@ -256,7 +256,8 @@ function CountUp({ target, duration = 700, suffix = '' }) {
         const startTime = performance.now();
         const tick = (now) => {
           const progress = Math.min((now - startTime) / duration, 1);
-          setCount(Math.round(progress * target));
+          const easeOutQuint = 1 - Math.pow(1 - progress, 5);
+          setCount(Math.round(easeOutQuint * target));
           if (progress < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
@@ -438,10 +439,10 @@ export default function App() {
           ))}
           <div className="exp-stat-item exp-stat-total">
             <span className="exp-stat-num">
-              <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={800} />
+              <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={1200} />
             </span>
             <span className="exp-stat-label">Total Events</span>
-            <span className="exp-stat-desc">Across all roles & sectors</span>
+            <span className="exp-stat-desc">No role too big, no post too small</span>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
