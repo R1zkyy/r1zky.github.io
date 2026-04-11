@@ -294,7 +294,7 @@ export default function App() {
           R1ZKY
         </div>
         <nav className="header-nav">
-          {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
+          {[['Profile', '#profile'], ['Network', '#network'], ['Experience', '#experience'], ['Projects', '#projects'], ['Design', '#design'], ['Achievements', '#achievements'], ['Internship', '#internship']].map(([l, h]) => (
             <a key={l} href={h} className="header-nav-link">{l}</a>
           ))}
         </nav>
@@ -535,13 +535,13 @@ export default function App() {
       <section className="section" id="design">
         <div className="section-narrative">
           <span className="narrative-log">AESTHETIC PROTOCOLS. // VISUAL SCHEMATICS AND CREATIVE ASSETS DUMP.</span>
-          <span className="narrative-count">[ {DIVISIONS.find(d => d.tag === '09')?.events?.reduce((acc, cat) => acc + (cat.links ? cat.links.length : 0), 0) || 0} ASSETS DEPLOYED OVER {DIVISIONS.find(d => d.tag === '09')?.events?.length || 0} MEDIUMS ]</span>
+          <span className="narrative-count">[ {DIVISIONS.find(d => d.tag === '10')?.events?.reduce((acc, cat) => acc + (cat.links ? cat.links.length : 0), 0) || 0} ASSETS DEPLOYED OVER {DIVISIONS.find(d => d.tag === '10')?.events?.length || 0} MEDIUMS ]</span>
         </div>
         <div className="section-number">05 // DESIGN</div>
         <h2 className="section-title">Creative<br /><em>Design</em></h2>
         <p className="section-tagline">Visuals that <em>speak before words do</em> — digital & product design crafted with intent across multiple mediums.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          {DIVISIONS.find(d => d.tag === '09')?.events?.map((cat, i) => (
+          {DIVISIONS.find(d => d.tag === '10')?.events?.map((cat, i) => (
             <div key={i} className="design-category">
               <div className="div-header" style={{ marginBottom: '16px' }}>
                 <span className="div-num">0{i + 1}</span>
