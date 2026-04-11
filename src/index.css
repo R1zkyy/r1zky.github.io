@@ -1763,23 +1763,30 @@ a {
 
 .exp-stat-total {
   grid-column: 1 / -1;
-  margin-top: 12px;
+  margin-top: 32px;
   align-items: center;
+  gap: 24px;
 }
 
 .exp-stat-total .exp-stat-num {
+  font-size: clamp(4rem, 10vw, 7rem);
   color: var(--chalk);
-  border-left: 2px solid var(--lime);
-  padding-left: 12px;
+  border-left: 4px solid var(--lime);
+  padding-left: 24px;
+}
+
+.exp-stat-total .exp-stat-label {
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
+  letter-spacing: 4px;
 }
 
 .exp-stat-total .exp-stat-desc {
   font-family: var(--font-h);
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
   color: var(--chalk);
   letter-spacing: 2px;
-  margin-top: 12px;
-  line-height: 1.3;
+  margin-top: 4px;
+  line-height: 1.2;
   opacity: 1;
 }
 
