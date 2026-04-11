@@ -424,25 +424,29 @@ export default function App() {
           {DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').map((div, i) => (
             <div key={i} className="exp-stat-item">
               <span className="exp-stat-num"><CountUp target={div.events.length} duration={600} /></span>
-              <span className="exp-stat-label">{div.name}</span>
-              <span className="exp-stat-desc">
-                {div.tag === '01' && 'Events led as project owner'}
-                {div.tag === '02' && 'Times on stage as host'}
-                {div.tag === '03' && 'Technical & stage crew roles'}
-                {div.tag === '04' && 'On-ground event coordination'}
-                {div.tag === '05' && 'Equipment logistics ops'}
-                {div.tag === '06' && 'First-aid & health posts'}
-                {div.tag === '07' && 'Crowd & security assignments'}
-                {div.tag === '08' && 'Participant escort duties'}
-              </span>
+              <div className="exp-stat-text-group">
+                <span className="exp-stat-label">{div.name}</span>
+                <span className="exp-stat-desc">
+                  {div.tag === '01' && 'Events led as project owner'}
+                  {div.tag === '02' && 'Times on stage as host'}
+                  {div.tag === '03' && 'Technical & stage crew roles'}
+                  {div.tag === '04' && 'On-ground event coordination'}
+                  {div.tag === '05' && 'Equipment logistics ops'}
+                  {div.tag === '06' && 'First-aid & health posts'}
+                  {div.tag === '07' && 'Crowd & security assignments'}
+                  {div.tag === '08' && 'Participant escort duties'}
+                </span>
+              </div>
             </div>
           ))}
           <div className="exp-stat-item exp-stat-total">
             <span className="exp-stat-num">
               <CountUp target={DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').reduce((a, d) => a + d.events.length, 0)} duration={1200} />
             </span>
-            <span className="exp-stat-label">Total Events</span>
-            <span className="exp-stat-desc"><em>No role too big</em>, no post too small.</span>
+            <div className="exp-stat-text-group">
+              <span className="exp-stat-label">Total Events</span>
+              <span className="exp-stat-desc"><em>No role too big</em>, no post too small.</span>
+            </div>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>

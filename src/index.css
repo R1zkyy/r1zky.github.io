@@ -1713,25 +1713,33 @@ a {
 
 /* ─── EXP STATS GRID (rolling number display) ─── */
 .exp-stats-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
   margin-top: 16px;
   margin-bottom: 40px;
+  align-items: start;
 }
 
 .exp-stat-item {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.exp-stat-text-group {
+  display: flex;
   flex-direction: column;
-  gap: 4px;
-  min-width: 80px;
+  gap: 2px;
+  padding-top: 6px;
 }
 
 .exp-stat-num {
   font-family: var(--font-h);
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--lime);
-  line-height: 1;
+  line-height: 0.8;
   letter-spacing: 1px;
 }
 
@@ -1754,8 +1762,9 @@ a {
 }
 
 .exp-stat-total {
-  flex: 1 1 100%;
+  grid-column: 1 / -1;
   margin-top: 12px;
+  align-items: center;
 }
 
 .exp-stat-total .exp-stat-num {
