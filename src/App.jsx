@@ -337,6 +337,7 @@ export default function App() {
         </div>
         <div className="section-number">02 // NETWORK</div>
         <h2 className="section-title">Organizations &<br /><em>Affiliations</em></h2>
+        <p className="section-tagline">Embedded in <em>IEEE, GDGoC, BluAmbassador</em> — active across technical, linguistic & innovation communities.</p>
         <div className="org-grid">
           {ORGS.map((o, i) => {
             const Inner = (
@@ -362,6 +363,7 @@ export default function App() {
         </div>
         <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
+        <p className="section-tagline">From <em>commanding the stage as MC</em>, <em>leading projects</em>, directing sound & light — to <em>holding the line on-ground</em>. No role too big, no post too small.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
           {DIVISIONS.filter(div => div.tag !== '09').map((div, di) => (
             <div key={di} className="div-block">
@@ -410,6 +412,7 @@ export default function App() {
         </div>
         <div className="section-number">04 // PROJECTS</div>
         <h2 className="section-title">Work &<br /><em>Projects</em></h2>
+        <p className="section-tagline">From <em>CNC machining</em> to <em>self-balancing robots</em> — each build sharpens the edge between theory and real-world engineering.</p>
         <div className="project-row">
           {PROJECTS.map((p, i) => (
             <div key={i} className="project-card">
@@ -445,6 +448,7 @@ export default function App() {
         </div>
         <div className="section-number">05 // DESIGN</div>
         <h2 className="section-title">Creative<br /><em>Design</em></h2>
+        <p className="section-tagline">Visuals that <em>speak before words do</em> — digital & product design crafted with intent across multiple mediums.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
           {DIVISIONS.find(d => d.tag === '09')?.events?.map((cat, i) => (
             <div key={i} className="design-category">
@@ -481,6 +485,7 @@ export default function App() {
         </div>
         <div className="section-number">06 // ACHIEVEMENTS</div>
         <h2 className="section-title">Awards &<br /><em>Recognition</em></h2>
+        <p className="section-tagline">Competing at the elite level — <em>IEEE-recognized</em> and campus-finalist certified. Performance on record.</p>
         <div className="ach-grid">
           {ACHIEVEMENTS.map((a, i) => {
             const Inner = (
@@ -509,6 +514,7 @@ export default function App() {
         </div>
         <div className="section-number">07 // INTERNSHIP</div>
         <h2 className="section-title">Work <br /><em>Experience</em></h2>
+        <p className="section-tagline">Real-world industry immersion — from <em>PT Semen Indonesia</em> maintenance floors to <em>PT PAL Indonesia</em> design labs.</p>
         {INTERNSHIPS.length === 0 ? (
           <div style={{ color: 'var(--mid)', fontFamily: 'var(--font-m)', fontSize: '1rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.5, paddingTop: '16px' }}>
             Coming soon — internship entries will appear here.
