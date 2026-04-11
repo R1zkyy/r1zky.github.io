@@ -71,6 +71,19 @@ const DIVISIONS = [
     ]
   },
   {
+    tag: '10', name: 'Runner',
+    events: [
+      {
+        role: 'Runner',
+        title: 'Cosplay Expo Surabaya 2026',
+        date: 'Apr 4–5, 2026',
+        details: ['Served as event runner — coordinating logistics, assisting crew, and ensuring smooth operational flow throughout the expo.'],
+        img: '/certs/cosplay_expo_runner.jpg',
+        imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } }
+      }
+    ]
+  },
+  {
     tag: '04', name: 'Equipment Division',
     events: [
       { role: 'Equipment Staff', title: 'Chibicon!', date: 'Apr 20–21, 2024', details: ['Managed equipment setup, logistics & teardown for the event'], img: '/certs/chibicon1_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
@@ -100,6 +113,7 @@ const DIVISIONS = [
       { role: 'Liaison Officer', title: 'LKMM Pra Tingkat Dasar', date: 'Oct 25–27, 2024', details: ['Accompanied & assisted participants throughout the event'], img: '/certs/lkmm_pra_td_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
     ]
   },
+
   {
     tag: '08', name: 'Certificates',
     events: [
@@ -418,6 +432,7 @@ export default function App() {
                 {div.tag === '05' && 'First-aid & health posts'}
                 {div.tag === '06' && 'Crowd & security assignments'}
                 {div.tag === '07' && 'Participant escort duties'}
+                {div.tag === '10' && 'On-ground event coordination'}
               </span>
             </div>
           ))}
