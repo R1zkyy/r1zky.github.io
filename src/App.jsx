@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
@@ -228,6 +228,32 @@ function PhotoSlot({ src, alt = '', className = '', imgOptions }) {
   );
 }
 
+// ─── COUNT-UP COMPONENT ───────────────────────────────────────────────────────
+
+function CountUp({ target, duration = 700, suffix = '' }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+  useEffect(() => {
+    const el = ref.current;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started.current) {
+        started.current = true;
+        const startTime = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          setCount(Math.round(progress * target));
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.3 });
+    if (el) observer.observe(el);
+    return () => observer.disconnect();
+  }, [target, duration]);
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
 // ─── APP ─────────────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -337,7 +363,20 @@ export default function App() {
         </div>
         <div className="section-number">02 // NETWORK</div>
         <h2 className="section-title">Organizations &<br /><em>Affiliations</em></h2>
-        <p className="section-tagline">Embedded in <em>IEEE, GDGoC, BluAmbassador</em> — active across technical, linguistic & innovation communities.</p>
+        <div className="exp-stats-grid">
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={4} duration={600} /></span>
+            <span className="exp-stat-label">Organizations</span>
+          </div>
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={6} duration={700} /></span>
+            <span className="exp-stat-label">Years Combined Commitment</span>
+          </div>
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={2026} duration={800} /></span>
+            <span className="exp-stat-label">Active Until</span>
+          </div>
+        </div>
         <div className="org-grid">
           {ORGS.map((o, i) => {
             const Inner = (
@@ -363,7 +402,20 @@ export default function App() {
         </div>
         <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
-        <p className="section-tagline">From <em>commanding the stage as MC</em>, <em>leading projects</em>, directing sound & light — to <em>holding the line on-ground</em>. No role too big, no post too small.</p>
+        <div className="exp-stats-grid">
+          {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').map((div, i) => (
+            <div key={i} className="exp-stat-item">
+              <span className="exp-stat-num"><CountUp target={div.events.length} duration={600} /></span>
+              <span className="exp-stat-label">{div.name}</span>
+            </div>
+          ))}
+          <div className="exp-stat-item exp-stat-total">
+            <span className="exp-stat-num">
+              <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={800} />
+            </span>
+            <span className="exp-stat-label">Total Events</span>
+          </div>
+        </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
           {DIVISIONS.filter(div => div.tag !== '09').map((div, di) => (
             <div key={di} className="div-block">
@@ -485,7 +537,7 @@ export default function App() {
         </div>
         <div className="section-number">06 // ACHIEVEMENTS</div>
         <h2 className="section-title">Awards &<br /><em>Recognition</em></h2>
-        <p className="section-tagline">Competing at the elite level — <em>IEEE-recognized</em> and campus-finalist certified. Performance on record.</p>
+        <p className="section-tagline">Competing and getting recognized — performance recorded and on display.</p>
         <div className="ach-grid">
           {ACHIEVEMENTS.map((a, i) => {
             const Inner = (
@@ -514,7 +566,20 @@ export default function App() {
         </div>
         <div className="section-number">07 // INTERNSHIP</div>
         <h2 className="section-title">Work <br /><em>Experience</em></h2>
-        <p className="section-tagline">Real-world industry immersion — from <em>PT Semen Indonesia</em> maintenance floors to <em>PT PAL Indonesia</em> design labs.</p>
+        <div className="exp-stats-grid">
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={2} duration={500} /></span>
+            <span className="exp-stat-label">Companies</span>
+          </div>
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={8} duration={600} /></span>
+            <span className="exp-stat-label">Months Total Duration</span>
+          </div>
+          <div className="exp-stat-item">
+            <span className="exp-stat-num"><CountUp target={2} duration={500} /></span>
+            <span className="exp-stat-label">Industries Crossed</span>
+          </div>
+        </div>
         {INTERNSHIPS.length === 0 ? (
           <div style={{ color: 'var(--mid)', fontFamily: 'var(--font-m)', fontSize: '1rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.5, paddingTop: '16px' }}>
             Coming soon — internship entries will appear here.

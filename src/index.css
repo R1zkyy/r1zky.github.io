@@ -1711,6 +1711,44 @@ a {
   font-style: normal;
 }
 
+/* ─── EXP STATS GRID (rolling number display) ─── */
+.exp-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin-top: 8px;
+  margin-bottom: 36px;
+}
+
+.exp-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.exp-stat-num {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--lime);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.exp-stat-label {
+  font-family: var(--font-m);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--mid);
+}
+
+.exp-stat-total .exp-stat-num {
+  color: var(--chalk);
+  border-left: 2px solid var(--lime);
+  padding-left: 12px;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
