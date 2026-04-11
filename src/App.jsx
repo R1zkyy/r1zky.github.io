@@ -71,7 +71,7 @@ const DIVISIONS = [
     ]
   },
   {
-    tag: '10', name: 'Runner',
+    tag: '04', name: 'Runner',
     events: [
       {
         role: 'Runner',
@@ -84,14 +84,14 @@ const DIVISIONS = [
     ]
   },
   {
-    tag: '04', name: 'Equipment Division',
+    tag: '05', name: 'Equipment Division',
     events: [
       { role: 'Equipment Staff', title: 'Chibicon!', date: 'Apr 20–21, 2024', details: ['Managed equipment setup, logistics & teardown for the event'], img: '/certs/chibicon1_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
       { role: 'Equipment Staff', title: 'Flutter Fusion Conference — The Vibe: Connection and Community', date: 'Feb 21, 2026', details: ['Managed equipment setup and logistics for the Flutter community conference'], img: '/certs/flutter_fusion.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } }
     ]
   },
   {
-    tag: '05', name: 'Health Division',
+    tag: '06', name: 'Health Division',
     events: [
       {
         role: 'Health Division Member', title: 'Surabaya Fun Run 2025', date: 'Oct 5, 2025',
@@ -101,21 +101,21 @@ const DIVISIONS = [
     ]
   },
   {
-    tag: '06', name: 'Safety Division',
+    tag: '07', name: 'Safety Division',
     events: [
       { role: 'Safety Division Member', title: 'Chibicon! 7', date: 'Jun 21–22, 2025', details: ['Crowd & visitor flow control', 'Maintained event area order'], img: '/certs/chibicon7_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center top' } } },
       { role: 'Safety Division Member', title: 'Chibicon 9', date: 'Dec 27–28, 2025', details: ['Crowd & visitor flow control', 'Maintained event area order'], img: '/certs/chibicon9_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
     ]
   },
   {
-    tag: '07', name: 'Liaison Officer',
+    tag: '08', name: 'Liaison Officer',
     events: [
       { role: 'Liaison Officer', title: 'LKMM Pra Tingkat Dasar', date: 'Oct 25–27, 2024', details: ['Accompanied & assisted participants throughout the event'], img: '/certs/lkmm_pra_td_photo.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } }
     ]
   },
 
   {
-    tag: '08', name: 'Certificates',
+    tag: '09', name: 'Certificates',
     events: [
       { role: 'Equipment Staff', title: 'Chibicon!', date: 'Apr 20–21, 2024', details: [], img: '/certs/chibicon_1.png', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
       { role: 'Operator', title: 'Final Project Competition 2024', date: 'Jul 9–11, 2024', details: [], img: '/certs/fpc_2024.jpg', imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } } },
@@ -132,7 +132,7 @@ const DIVISIONS = [
     ]
   },
   {
-    tag: '09', name: 'Design',
+    tag: '10', name: 'Design',
     events: [
       {
         role: 'Design', title: 'Digital Design', date: '', details: [], img: null,
@@ -416,12 +416,12 @@ export default function App() {
       <section className="section" id="experience">
         <div className="section-narrative">
           <span className="narrative-log">MISSION LOGS: FIELD OPERATIONS. // DEPLOYMENT HISTORY DETECTED.</span>
-          <span className="narrative-count">[ {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((acc, div) => acc + div.events.length, 0)} OPERATIONS LOGGED ACROSS {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').length} SECTORS ]</span>
+          <span className="narrative-count">[ {DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').reduce((acc, div) => acc + div.events.length, 0)} OPERATIONS LOGGED ACROSS {DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').length} SECTORS ]</span>
         </div>
         <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
         <div className="exp-stats-grid">
-          {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').map((div, i) => (
+          {DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').map((div, i) => (
             <div key={i} className="exp-stat-item">
               <span className="exp-stat-num"><CountUp target={div.events.length} duration={600} /></span>
               <span className="exp-stat-label">{div.name}</span>
@@ -429,24 +429,24 @@ export default function App() {
                 {div.tag === '01' && 'Events led as project owner'}
                 {div.tag === '02' && 'Times on stage as host'}
                 {div.tag === '03' && 'Technical & stage crew roles'}
-                {div.tag === '04' && 'Equipment logistics ops'}
-                {div.tag === '05' && 'First-aid & health posts'}
-                {div.tag === '06' && 'Crowd & security assignments'}
-                {div.tag === '07' && 'Participant escort duties'}
-                {div.tag === '10' && 'On-ground event coordination'}
+                {div.tag === '04' && 'On-ground event coordination'}
+                {div.tag === '05' && 'Equipment logistics ops'}
+                {div.tag === '06' && 'First-aid & health posts'}
+                {div.tag === '07' && 'Crowd & security assignments'}
+                {div.tag === '08' && 'Participant escort duties'}
               </span>
             </div>
           ))}
           <div className="exp-stat-item exp-stat-total">
             <span className="exp-stat-num">
-              <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={1200} />
+              <CountUp target={DIVISIONS.filter(div => div.tag !== '10' && div.tag !== '09').reduce((a, d) => a + d.events.length, 0)} duration={1200} />
             </span>
             <span className="exp-stat-label">Total Events</span>
             <span className="exp-stat-desc"><em>No role too big</em>, no post too small.</span>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-          {DIVISIONS.filter(div => div.tag !== '09').map((div, di) => (
+          {DIVISIONS.filter(div => div.tag !== '10').map((div, di) => (
             <div key={di} className="div-block">
               <div className="div-header">
                 <span className="div-num">{div.tag}</span>
