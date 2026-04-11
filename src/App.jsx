@@ -333,7 +333,7 @@ export default function App() {
       <section className="section" id="network">
         <div className="section-narrative">
           <span className="narrative-log">AFFILIATIONS & GANGS. // TRACKING FACTION LOYALTIES AND COMMAND RANKS.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{ORGS.length}]</span>
+          <span className="narrative-count">[ {ORGS.length} ELITE AFFILIATIONS SECURED ]</span>
         </div>
         <div className="section-number">02 // NETWORK</div>
         <h2 className="section-title">Organizations &<br /><em>Affiliations</em></h2>
@@ -358,7 +358,7 @@ export default function App() {
       <section className="section" id="experience">
         <div className="section-narrative">
           <span className="narrative-log">MISSION LOGS: FIELD OPERATIONS. // DEPLOYMENT HISTORY DETECTED.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{DIVISIONS.filter(div => div.tag !== '09').reduce((acc, div) => acc + div.events.length, 0)}]</span>
+          <span className="narrative-count">[ {DIVISIONS.filter(div => div.tag !== '09').reduce((acc, div) => acc + div.events.length, 0)} OPERATIONS LOGGED ACROSS {DIVISIONS.filter(div => div.tag !== '09').length} SECTORS ]</span>
         </div>
         <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
@@ -406,7 +406,7 @@ export default function App() {
       <section className="section" id="projects">
         <div className="section-narrative">
           <span className="narrative-log">ENGINEERING ARCHIVES. // UNPACKING PROTOTYPES AND SYSTEM BUILDS.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{PROJECTS.length}]</span>
+          <span className="narrative-count">[ {PROJECTS.length} HARDWARE & SOFTWARE BUILD PROTOCOLS ]</span>
         </div>
         <div className="section-number">04 // PROJECTS</div>
         <h2 className="section-title">Work &<br /><em>Projects</em></h2>
@@ -441,7 +441,7 @@ export default function App() {
       <section className="section" id="design">
         <div className="section-narrative">
           <span className="narrative-log">AESTHETIC PROTOCOLS. // VISUAL SCHEMATICS AND CREATIVE ASSETS DUMP.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{DIVISIONS.find(d => d.tag === '09')?.events?.reduce((acc, cat) => acc + (cat.links ? cat.links.length : 0), 0) || 0}]</span>
+          <span className="narrative-count">[ {DIVISIONS.find(d => d.tag === '09')?.events?.reduce((acc, cat) => acc + (cat.links ? cat.links.length : 0), 0) || 0} ASSETS DEPLOYED OVER {DIVISIONS.find(d => d.tag === '09')?.events?.length || 0} MEDIUMS ]</span>
         </div>
         <div className="section-number">05 // DESIGN</div>
         <h2 className="section-title">Creative<br /><em>Design</em></h2>
@@ -477,7 +477,7 @@ export default function App() {
       <section className="section" id="achievements">
         <div className="section-narrative">
           <span className="narrative-log">PERFORMANCE EVALUATION. // RECORDING ELITE-CLASS RECOGNITIONS AND METRICS.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{ACHIEVEMENTS.length}]</span>
+          <span className="narrative-count">[ {ACHIEVEMENTS.length} OUTSTANDING MERITS ACHIEVED ]</span>
         </div>
         <div className="section-number">06 // ACHIEVEMENTS</div>
         <h2 className="section-title">Awards &<br /><em>Recognition</em></h2>
@@ -505,7 +505,7 @@ export default function App() {
       <section className="section" id="internship">
         <div className="section-narrative">
           <span className="narrative-log">CORPORATE INITIATION. // EXTRACTING INDUSTRY DEPLOYMENT LOGS.</span>
-          <span className="narrative-count">TOTAL RECORDS: [{INTERNSHIPS.length}]</span>
+          <span className="narrative-count">[ {INTERNSHIPS.length} CORPORATE ENGAGEMENTS RECORDED ]</span>
         </div>
         <div className="section-number">07 // INTERNSHIP</div>
         <h2 className="section-title">Work <br /><em>Experience</em></h2>
