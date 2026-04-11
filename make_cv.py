@@ -123,6 +123,8 @@ add_entry("Komunitas Sahabat Bahasa PENS", "Daily Operations Committee Staff", "
 add_section_header("Field & Event Experience")
 
 # Project Leader
+add_entry("GCP Automation: Let the Cloud Do It For You", "PIC", "Mar 13, 2026", 
+          None, ["Person-in-Charge of the GCP Automation event, coordinating speakers and flow."])
 add_entry("Data Science 101: Taking Your First Steps in the World of Data", "PIC", "Mar 6, 2026", 
           None, ["Person-in-Charge of the data science 101 event, coordinating speakers and flow."])
 add_entry("Career Roadmap: Navigating the AI Engineering Landscape", "PIC", "Feb 27, 2026", 
