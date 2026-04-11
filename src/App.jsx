@@ -157,9 +157,9 @@ const ACHIEVEMENTS = [
     title: 'Finalist — Master of Ceremony Category',
     org: 'Politeknik Elektronika Negeri Surabaya',
     accent: false, icon: '🎤',
-    img: imgFinalisMc,
+    img: '/certs/pens_elite_cert.jpg',
     href: 'https://www.instagram.com/p/DRl-B1jEjSC/?hl=id&img_index=7',
-    imgOptions: { hoverPop: true, style: { objectPosition: '70% 30%' } }
+    imgOptions: { hoverPop: true, style: { objectFit: 'cover', objectPosition: 'center' } }
   },
   {
     eyebrow: 'Kampung Inggris Online',
