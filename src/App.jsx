@@ -367,14 +367,17 @@ export default function App() {
           <div className="exp-stat-item">
             <span className="exp-stat-num"><CountUp target={4} duration={600} /></span>
             <span className="exp-stat-label">Organizations</span>
+            <span className="exp-stat-desc">Active memberships joined</span>
           </div>
           <div className="exp-stat-item">
-            <span className="exp-stat-num"><CountUp target={6} duration={700} /></span>
-            <span className="exp-stat-label">Years Combined Commitment</span>
+            <span className="exp-stat-num"><CountUp target={2025} duration={700} /></span>
+            <span className="exp-stat-label">Active Since</span>
+            <span className="exp-stat-desc">All orgs joined same year</span>
           </div>
           <div className="exp-stat-item">
-            <span className="exp-stat-num"><CountUp target={2026} duration={800} /></span>
-            <span className="exp-stat-label">Active Until</span>
+            <span className="exp-stat-num"><CountUp target={2027} duration={800} /></span>
+            <span className="exp-stat-label">Commit Until</span>
+            <span className="exp-stat-desc">Longest running commitment</span>
           </div>
         </div>
         <div className="org-grid">
@@ -398,7 +401,7 @@ export default function App() {
       <section className="section" id="experience">
         <div className="section-narrative">
           <span className="narrative-log">MISSION LOGS: FIELD OPERATIONS. // DEPLOYMENT HISTORY DETECTED.</span>
-          <span className="narrative-count">[ {DIVISIONS.filter(div => div.tag !== '09').reduce((acc, div) => acc + div.events.length, 0)} OPERATIONS LOGGED ACROSS {DIVISIONS.filter(div => div.tag !== '09').length} SECTORS ]</span>
+          <span className="narrative-count">[ {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((acc, div) => acc + div.events.length, 0)} OPERATIONS LOGGED ACROSS {DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').length} SECTORS ]</span>
         </div>
         <div className="section-number">03 // EXPERIENCE</div>
         <h2 className="section-title">Field<br /><em>Experience</em></h2>
@@ -407,6 +410,15 @@ export default function App() {
             <div key={i} className="exp-stat-item">
               <span className="exp-stat-num"><CountUp target={div.events.length} duration={600} /></span>
               <span className="exp-stat-label">{div.name}</span>
+              <span className="exp-stat-desc">
+                {div.tag === '01' && 'Events led as project owner'}
+                {div.tag === '02' && 'Times on stage as host'}
+                {div.tag === '03' && 'Technical & stage crew roles'}
+                {div.tag === '04' && 'Equipment logistics ops'}
+                {div.tag === '05' && 'First-aid & health posts'}
+                {div.tag === '06' && 'Crowd & security assignments'}
+                {div.tag === '07' && 'Participant escort duties'}
+              </span>
             </div>
           ))}
           <div className="exp-stat-item exp-stat-total">
@@ -414,6 +426,7 @@ export default function App() {
               <CountUp target={DIVISIONS.filter(div => div.tag !== '09' && div.tag !== '08').reduce((a, d) => a + d.events.length, 0)} duration={800} />
             </span>
             <span className="exp-stat-label">Total Events</span>
+            <span className="exp-stat-desc">Across all roles & sectors</span>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
