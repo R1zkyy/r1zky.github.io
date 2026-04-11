@@ -3,6 +3,10 @@ import React from 'react';
 const Education = () => {
     return (
         <section className="dossier-section" data-section-id="EDU.RECORD">
+            <div className="section-narrative">
+                <span className="narrative-log">PERSONNEL TRAINING. // EXTRACTING ACADEMIC CALIBRATION LOGS.</span>
+                <span className="narrative-count">TOTAL RECORDS: [3]</span>
+            </div>
             <h2 className="bracket-header"><span>EDUCATION</span>_LOG</h2>
 
             <div className="data-card">

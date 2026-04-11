@@ -1669,3 +1669,32 @@ a {
     height: 240px;
   }
 }
+
+/* --- NARRATIVE SECTION HEADER --- */
+.section-narrative {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--border2);
+  padding-bottom: 6px;
+}
+
+.narrative-log {
+  color: var(--chalk);
+  animation: blink 2s infinite;
+}
+
+.narrative-count {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

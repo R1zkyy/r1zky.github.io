@@ -3,6 +3,10 @@ import React from 'react';
 const Achievements = () => {
     return (
         <section className="dossier-section" data-section-id="ACH.CLASSIFIED">
+            <div className="section-narrative">
+                <span className="narrative-log">PERFORMANCE EVALUATION. // RECORDING ELITE-CLASS RECOGNITIONS AND METRICS.</span>
+                <span className="narrative-count">TOTAL RECORDS: [2]</span>
+            </div>
             <h2 className="bracket-header"><span>ACHIEVEMENTS</span>_LOG</h2>
 
             <div className="data-card">

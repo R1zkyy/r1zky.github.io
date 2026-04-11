@@ -3,6 +3,10 @@ import React from 'react';
 const Organization = () => {
     return (
         <section className="dossier-section" data-section-id="ORG.AFFILIATION">
+            <div className="section-narrative">
+                <span className="narrative-log">AFFILIATIONS & GANGS. // TRACKING FACTION LOYALTIES AND COMMAND RANKS.</span>
+                <span className="narrative-count">TOTAL RECORDS: [4]</span>
+            </div>
             <h2 className="bracket-header"><span>NETWORK</span>_AFFILIATIONS</h2>
 
             <div className="data-card">

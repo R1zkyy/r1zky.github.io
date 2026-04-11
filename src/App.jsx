@@ -396,6 +396,10 @@ export default function App() {
 
       {/* ── PROJECTS ── */}
       <section className="section" id="projects">
+        <div className="section-narrative">
+          <span className="narrative-log">ENGINEERING ARCHIVES. // UNPACKING PROTOTYPES AND SYSTEM BUILDS.</span>
+          <span className="narrative-count">TOTAL RECORDS: [{PROJECTS.length}]</span>
+        </div>
         <div className="section-number">04 // PROJECTS</div>
         <h2 className="section-title">Work &<br /><em>Projects</em></h2>
         <div className="project-row">

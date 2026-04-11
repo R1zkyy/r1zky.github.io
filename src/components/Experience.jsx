@@ -98,8 +98,14 @@ const Experience = () => {
         ]
     };
 
+    const totalEvents = Object.values(divisions).flat().length;
+
     return (
         <section className="dossier-section" data-section-id="EXP.DIVISIONS">
+            <div className="section-narrative">
+                <span className="narrative-log">MISSION LOGS: FIELD OPERATIONS. // DEPLOYMENT HISTORY DETECTED.</span>
+                <span className="narrative-count">TOTAL RECORDS: [{totalEvents}]</span>
+            </div>
             <h2 className="bracket-header"><span>FIELD</span>_EXPERIENCE</h2>
 
             {Object.entries(divisions).map(([divisionName, events], idx) => (
